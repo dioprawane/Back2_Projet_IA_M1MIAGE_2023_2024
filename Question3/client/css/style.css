@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    color: white;
+    font-family: 'Creepster', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #343541;
+    display: flex;
+}
+
+h1 {
+    font-size: 33px;
+    font-weight: 600;
+    padding: 200px 0;
+}
+
+
+.side-bar {
+    background-color: #202123;
+    width: 244px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed; /* Ajustement ici */
+    left: 0; /* S'assurer qu'elle est alignée à gauche */
+    top: 0; /* S'assurer qu'elle commence en haut */
+    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse la hauteur de l'écran */
+}
+
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-left: 244px;
+}
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.info {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    padding: 10px;
+}
+
+input {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    font-size: 20px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 54px 55px,
+        rgba(0, 0, 0, 0.05) 0 -12px 30px,
+        rgba(0, 0, 0, 0.05) 0 4px 6px,
+        rgba(0, 0, 0, 0.05) 0 12px 3px,
+        rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input-container {
+    align-items: center;
+    position:relative;
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.input-container #submit {
+    position:relative;
+    margin-left: auto;
+    cursor:pointer;
+}
+
+button {
+    border : solid 0.5px rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    padding:10px;
+    margin: 10px;
+}
+
+nav {
+    border : solid 0.5px rgba(255, 255, 255, 0.5);
+    padding:10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.history {
+    padding:10px;
+    margin: 10px;
+    display:flex;
+    flex-direction: column;
+    height:100%
+}
+
+.history p {
+    cursor:pointer;
+}
+
+.image-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
+}
+
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+
+/* Animation for loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.input-container input {
+    border: none;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.input-container button {
+    background-color: rgb(39, 42, 51);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Pousse le bouton vers la droite */
+    margin-right: auto; /* Espace à droite du bouton */
+}
+
+.loader {
+    display: flex; /* Hidden by default, shown during loading */
+    position: absolute;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container input[type="text"] {
+    border: none;
+    flex-grow: 1;
+    margin: 0 10px; /* Spacing on both sides */
+}
+
+.file-upload-label {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-upload-label:hover {
+    background-color: rgb(39, 42, 51); /* Couleur bleu plus foncé au survol */
+}
+
+.input-container .file-upload-label {
+    position: relative; /* Ensure the label is positioned relatively within the flex container */
+    margin-right: auto; /* This will push everything else to the right */
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Make sure the file input button appears on the left */
+.input-container .file-upload-label {
+    order: -1; /* This ensures that the label is the first item in the flex container */
+    color: white;
+    background-color: rgb(39, 42, 51); /* Icon background color */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.input-container .file-upload-label i {
+    pointer-events: none; /* Prevent the icon from blocking clicks */
+}
+
+.input-container .file-input {
+    display: none; /* Hide the actual file input */
+}
+
+.file_load {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*.loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    top: 0px;
+    right: 7%;
+    bottom: 50px;
+    left: 0px;
+}*/
+
+
+
