@@ -144,6 +144,9 @@ app.post('/analyze', upload.none(), async (req, res) => {
 res.json(response);
 });
 
+app.get('/', (req, res) => {
+  res.send('Server is running!');
+});
 
 
 app.listen(port, () => {
