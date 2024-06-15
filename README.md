@@ -2,12 +2,11 @@
 
 ## Description
 
-
+C'est une api REST qui permet d'utiliser l'API d'openAI pour un projet donné dans le cadre du Master MIAGE.
 
 ## Objectifs
-
-
-## Prérequis
+* Générer des images en fonction de demandes
+* Générer des réponses textuelles en fonction d'une demande
 
 
 ## Installation
@@ -33,6 +32,11 @@ Pour utiliser ce projet, vous aurez besoin de :
    ```
 
 -------------------------------------------------------------------------------------------
+
+## Description des routes 
+
+* /image : c'est une requête post qui permet de générer une image à partir d'un prompt.
+* /chat :  c'est une requête post qui permet de générer une réponse textuelle à partir d'un prompt.
 
 ## Contributeurs
 
