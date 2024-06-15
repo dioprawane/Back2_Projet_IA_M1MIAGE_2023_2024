@@ -37,6 +37,8 @@ Pour utiliser ce projet, vous aurez besoin de :
 
 * /image : c'est une requête post qui permet de générer une image à partir d'un prompt.
 * /chat :  c'est une requête post qui permet de générer une réponse textuelle à partir d'un prompt.
+* /speech : c'est une requête post qui permet de générer en plus de la réponse textuelle, une réponse vocale.
+* /stable-diffusion : nous n'avons pas eu le temps de le faire car nous étions plutôt focalisés sur le modèle fine-tuning.
 
 ## Contributeurs
 
